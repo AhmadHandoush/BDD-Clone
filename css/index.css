@@ -72,13 +72,38 @@ p {
   background-color: var(--main-color);
   color: var(--bg-white);
 }
-.title {
+
+.hero {
+  background-image: url("../assets/Game_Room_Shop_-_Foosball_Table_Buyer_s_Guide_1024x1024_b7392822-438b-4811-983a-0e83a6356176_1024x1024.jpg");
+  height: 120vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.hero-one {
+  height: 100%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero .title {
+  margin-top: 1rem;
+  font-family: "TheMixBlack-Caps", Sans-serif;
+}
+.hero-one .t-one {
   text-align: center;
 }
-.hero {
-  background-image: url("../assets/");
+.hero h2 {
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 40px;
+  color: var(--bg-white);
+  font-family: "TheMixBlack-Caps", Sans-serif;
 }
-
 header {
   height: 158.5px;
   background-color: transparent;
@@ -90,8 +115,9 @@ header .container {
   gap: 20px;
 }
 header .nav-brand img {
-  height: 100px;
+  height: 80px;
   width: 100px;
+  margin-top: 10px;
 }
 
 .nav {
@@ -191,8 +217,30 @@ header .nav-lists .nav-item:last-child {
   .nav {
     display: none;
   }
-  .icon {
+  header .icon {
     display: block;
+  }
+  header .icon i {
+    font-size: 30px;
+  }
+  .hero {
+    height: 60vh;
+  }
+
+  .hero-one {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .hero-one h2 {
+    font-size: 30px;
+  }
+  .hero-one .title {
+    margin-top: 0;
   }
 }
 @media (min-width: 921px) and (max-width: 1279px) {
