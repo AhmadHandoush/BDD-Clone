@@ -5,7 +5,7 @@
   --second-color: #646464;
   --text-color: #7a7a7a;
   --black-color: #212121;
-  --main-transition: 0.3s;
+  --main-transition: 0.5s;
   --bg-white: #ffffff;
 }
 html {
@@ -241,8 +241,8 @@ header .has-mega-2 .mega-2 {
 
 /* foundations sections */
 .foundations {
-  background-color: #7d7d7d;
-  padding: 1rem;
+  background-color: rgba(211, 211, 211, 0.3);
+  padding: 2rem;
 }
 .foundations .title {
   margin-top: 1rem;
@@ -266,6 +266,10 @@ header .has-mega-2 .mega-2 {
   gap: 10px;
   min-width: 100px;
 }
+.foundations .cards .card:hover {
+  background-color: rgba(211, 211, 211, 0.4);
+}
+
 .sec-card {
   flex-direction: column;
   display: flex;
@@ -273,6 +277,19 @@ header .has-mega-2 .mega-2 {
 .pic {
   text-align: center;
 }
+.foundations .cards .card:last-child i {
+  color: #643b9f;
+}
+.foundations .cards .card:nth-child(4) i {
+  color: #4cbb17;
+}
+.foundations .cards .card:nth-child(3) i {
+  color: #01796f;
+}
+.foundations .cards .card:nth-child(2) i {
+  color: #cbec7d;
+}
+
 .card i {
   font-size: 100px;
   color: var(--main-color);
@@ -305,6 +322,7 @@ header .has-mega-2 .mega-2 {
 }
 .community .infos {
   gap: 40px;
+  flex-wrap: wrap;
 }
 .community .title h2 {
   font-size: 40px;
@@ -313,6 +331,7 @@ header .has-mega-2 .mega-2 {
 
 .community .boxes {
   gap: 20px;
+  flex-wrap: wrap;
 }
 .community .box {
   padding: 30px 30px 10px 30px;
@@ -367,7 +386,10 @@ header .has-mega-2 .mega-2 {
   font-weight: bold;
   color: var(--text-color);
 }
-
+.community .know {
+  text-align: center;
+  bottom: 0;
+}
 /* hub sections  */
 .hub {
   background-image: url("../assets/beirut-lebanon-04082018-downtown-old-600nw-2144510637.webp");
@@ -446,7 +468,7 @@ header .has-mega-2 .mega-2 {
 
 /* trending section  */
 .trending {
-  background-color: #d5d5d5;
+  background-color: rgba(211, 211, 211, 0.3);
   padding: 20px;
 }
 .trending .title {
@@ -526,6 +548,7 @@ header .has-mega-2 .mega-2 {
   font-size: 15px;
   text-transform: uppercase;
 }
+/* few words  */
 .few-words {
   background-color: var(--bg-white);
   padding: 4rem;
@@ -550,9 +573,42 @@ header .has-mega-2 .mega-2 {
 
 .few-words .word-1 {
   width: 280px;
+  position: relative;
+  background-color: black;
+  padding: 20px 0;
+  overflow: hidden;
+  z-index: 10;
 }
+
 .few-words .word-1 img {
   max-width: 100%;
+  height: 100%;
+}
+
+.word-1 .over {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.5);
+
+  z-index: 100;
+  transform: translateY(100%);
+  cursor: pointer;
+
+  transition: var(--main-transition);
+}
+.word-1 .over {
+  z-index: 1999;
+}
+.few-words .word-1:hover .over {
+  transform: translateY(0);
+}
+.over h3 a {
+  position: relative;
+  z-index: 102;
+  color: var(--bg-white);
 }
 .few-words .dots {
   display: flex;
@@ -579,21 +635,28 @@ footer .container {
   margin-left: auto;
 }
 footer {
-  padding: 1rem;
+  padding: 3rem;
   background-color: #212121;
+  margin-top: 2rem;
+  padding-bottom: 20px;
 }
-footer .head {
-  margin-bottom: 2rem;
+
+footer .ok {
+  margin-top: -20px;
+  margin-bottom: 20px;
 }
-footer .head h2 {
-  color: #d5d5d5;
+footer .columns .col:nth-child(2) {
+  margin-top: 30px;
+}
+footer .columns .col:nth-child(3) {
+  margin-top: 30px;
 }
 footer .columns .col h2 {
-  font-size: 20px;
+  font-size: 15px;
   color: var(--text-color);
 }
 footer .columns ul {
-  gap: 20px;
+  gap: 10px;
 }
 footer .columns ul li {
   margin-left: 20px;
@@ -603,6 +666,7 @@ footer .columns ul li a {
 }
 footer .columns {
   justify-content: space-between;
+  gap: 50px;
 }
 
 .item {
@@ -613,6 +677,7 @@ footer .columns {
   border-radius: 6px;
   overflow: hidden;
   height: 40px;
+  cursor: pointer;
 }
 
 .item div img {
@@ -626,11 +691,51 @@ footer ul li a {
   border-bottom: 2px solid transparent;
   transition: var(--main-transition);
 }
-footer ul li a:hover {
+footer a:hover {
   border-bottom: 2px solid var(--main-color);
 }
 .final {
   gap: 10px;
+}
+
+footer .reserve {
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+footer .reserved small {
+  color: var(--second-color);
+}
+footer .reserved small a {
+  color: var(--main-color);
+  border-bottom: 1px solid transparent;
+  transition: var(--main-transition);
+}
+footer .reserved small a:hover {
+  border-bottom: 1px solid var(--main-color);
+}
+footer .fa-envelope {
+  color: var(--main-color);
+  margin-right: 4px;
+}
+footer .fa-phone {
+  color: var(--main-color);
+  margin-right: 4px;
+}
+footer .social {
+  gap: 20px;
+}
+footer .social i {
+  font-size: 20px;
+  cursor: pointer;
+}
+footer .social i:hover {
+  color: var(--bg-white);
+}
+.ok h2 {
+  font-size: 20px;
 }
 
 /* media queries */
@@ -686,5 +791,355 @@ footer ul li a:hover {
   .main-nav .nav-item .nav-link {
     font-size: 0.75rem;
     gap: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .foundations {
+    background-color: rgba(211, 211, 211, 0.3);
+    padding: 1rem;
+  }
+  .foundations .title {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .foundations .title h2 {
+    font-size: 30px;
+  }
+
+  .foundations .cards {
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 0 10px;
+  }
+  .foundations .cards .card {
+    background-color: var(--bg-white);
+    padding: 20px 30px;
+
+    width: 100%;
+    /* flex: 1; */
+    gap: 10px;
+    min-width: 100px;
+  }
+
+  /* vision section  */
+  .vision {
+    background-color: var(--text-color);
+    padding: 2rem 2rem 3rem 2rem;
+  }
+  .vision h2 {
+    color: var(--bg-white);
+    font-size: 30px;
+  }
+  .vision .image {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .vision .image img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* community section 
+ */
+  .community {
+    padding-bottom: 2rem;
+  }
+  .community .infos {
+    gap: 40px;
+    flex-direction: column;
+  }
+  .community .infos .image {
+    display: none;
+  }
+  .community .title h2 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .community .boxes {
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .community .box {
+    padding: 30px 30px 10px 30px;
+    background-image: linear-gradient(
+      to bottom right,
+      #dedede,
+      var(--bg-white)
+    );
+
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .community .inner-box {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .inner-box h2 {
+    font-size: 20px;
+  }
+  .inner-box ul li {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+  .inner-box ul li span:nth-child(2) {
+    line-height: 1.5;
+  }
+  .community .images {
+    gap: 10px;
+
+    text-align: center;
+  }
+
+  .community .bottom {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .bottom .img {
+    border-radius: 6px;
+    overflow: hidden;
+    width: 150px;
+    cursor: pointer;
+  }
+
+  .community .images .img img {
+    max-width: 100%;
+    width: 100%;
+  }
+  .community .bottom p {
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 16px;
+  }
+
+  /* hub sections  */
+  .hub {
+    background-image: url("../assets/beirut-lebanon-04082018-downtown-old-600nw-2144510637.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    padding: 2rem;
+    position: relative;
+  }
+  .hub .title h2 {
+    font-weight: bold;
+  }
+  .hub .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 2;
+  }
+  .hub .all {
+    position: relative;
+    z-index: 10;
+  }
+  .cl {
+    transform: translateY(15px);
+  }
+  .sections {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .sections .section {
+    width: 100%;
+  }
+
+  /* trending section  */
+  .trending {
+    background-color: #d5d5d5;
+    padding: 10px;
+  }
+  .trending .title {
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .none {
+    display: none;
+  }
+  .carousels {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    position: relative;
+  }
+  .carousels .to-left,
+  .carousels .to-right {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--main-color);
+    height: 30px;
+
+    width: 30px;
+  }
+  .carousels .to-left {
+    left: -7px;
+  }
+  .carousels button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  .carousels button i {
+    color: var(--bg-white);
+    font-weight: bold;
+  }
+  .carousels .to-right {
+    right: -22px;
+  }
+  .carousel {
+    width: 350px;
+    background-color: var(--bg-white);
+  }
+  .carousel .image {
+    width: 100%;
+  }
+  .carousel .image img {
+    max-width: 100%;
+  }
+  .carousel .car-content h2 {
+    padding: 10px;
+  }
+  .carousel .car-content p {
+    padding: 10px 0 0 10px;
+  }
+  .swipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  .swipe .swipe-points {
+    display: flex;
+    gap: 10px;
+  }
+  .swipe .swipe-points > span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+    background-color: var(--text-color);
+  }
+  .swipe button a {
+    color: var(--bg-white);
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+
+  /* few words  */
+  .few-words {
+    padding: 0rem;
+  }
+  .few-words .content {
+    width: 95%;
+
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .few-words .title h2 {
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  /* footer  */
+  footer .container {
+    width: 100%;
+  }
+  footer {
+    background-color: #212121;
+    padding: 0 5px;
+    margin-top: 2rem;
+  }
+
+  footer .ok {
+    margin-top: 0;
+    border-bottom: 1px solid var(--second-color);
+    padding: 10px 0;
+    color: var(--text-color);
+  }
+  footer .columns {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  footer .columns .col:nth-child(2) {
+    margin-top: 30px;
+  }
+  footer .columns .col:nth-child(3) {
+    margin-top: 30px;
+  }
+  footer .columns .col h2 {
+    font-size: 20px;
+    color: var(--text-color);
+  }
+  footer .columns ul {
+    gap: 20px;
+  }
+
+  footer .columns ul li a {
+    color: var(--bg-white);
+  }
+  footer .columns {
+    justify-content: space-between;
+  }
+
+  .item {
+    gap: 10px;
+  }
+  .item div {
+    width: 100px;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 40px;
+  }
+
+  .item div img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .small {
+    font-size: 10px;
+  }
+  footer ul li a {
+    border-bottom: 2px solid transparent;
+    transition: var(--main-transition);
+  }
+  footer ul li a:hover {
+    border-bottom: 2px solid var(--main-color);
+  }
+  .final {
+    gap: 10px;
   }
 }
