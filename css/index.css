@@ -132,8 +132,7 @@ header .nav-brand img {
 header .main-nav {
   height: 39.19px;
 }
-nav .nav-lists {
-}
+
 header .main-nav .nav-item {
   border-radius: 6px;
   height: 100%;
@@ -252,8 +251,7 @@ header .has-mega-2 .mega-2 {
 .foundations .title h2 {
   font-size: 40px;
 }
-.foundations-title {
-}
+
 .foundations .cards {
   flex-wrap: wrap;
   justify-content: space-between;
@@ -538,8 +536,7 @@ header .has-mega-2 .mega-2 {
   margin-right: auto;
   gap: 0.2rem;
 }
-.few-words .title {
-}
+
 .few-words .title h2 {
   font-weight: bold;
   font-size: 30px;
