@@ -259,7 +259,7 @@ header .has-mega-2 .mega-2 {
 
 /* foundations sections */
 .foundations {
-  background-color: rgba(211, 211, 211, 0.3);
+  background-color: #f5f5f5;
   padding: 2rem;
 }
 .foundations .title {
@@ -281,6 +281,7 @@ header .has-mega-2 .mega-2 {
 
   width: 18%;
   min-width: 100px;
+  border-radius: 0.35rem;
 
   gap: 10px;
 }
@@ -379,6 +380,7 @@ header .has-mega-2 .mega-2 {
   position: relative;
   width: 230px;
   height: 550px;
+  border-radius: 0.3rem;
 
   transition: var(--main-transition);
 }
@@ -394,8 +396,16 @@ header .has-mega-2 .mega-2 {
   justify-content: space-between;
   height: 100%;
 }
+.community .top ul li svg {
+  font-size: 1em;
+  font-weight: bold;
+}
 .know {
   bottom: 0;
+}
+.know button {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .inner-box h2 {
   font-size: 20px;
@@ -455,6 +465,7 @@ header .has-mega-2 .mega-2 {
 }
 .hub .title h2 {
   font-weight: bold;
+  font-size: 30px;
 }
 
 .hub .all {
@@ -473,7 +484,7 @@ header .has-mega-2 .mega-2 {
 }
 .sections .section {
   flex-direction: column;
-  width: 23%;
+  width: 22%;
 }
 .sections .section .count {
   display: flex;
@@ -481,8 +492,47 @@ header .has-mega-2 .mega-2 {
   align-items: center;
 }
 
-.sections .section .count > img {
+/* .section:nth-child(2) .cl h1 {
+  color: #21212100;
+  font-family: "TheMixBlack-Caps", Sans-serif;
+  font-size: 35.1px;
+  font-weight: 400;
+  -webkit-text-stroke-width: 2px;
+  stroke-width: 2px;
+  -webkit-text-stroke-color: #e13870;
+  stroke: #e13870;
 }
+.section:nth-child(1) .cl h1 {
+  color: #21212100;
+  font-family: "TheMixBlack-Caps", Sans-serif;
+  font-size: 35.1px;
+  font-weight: 400;
+  -webkit-text-stroke-width: 2px;
+  stroke-width: 2px;
+  -webkit-text-stroke-color: #009a9e;
+  stroke: #009a9e;
+}
+.section:nth-child(3) h1 {
+  color: #21212100;
+  font-family: "TheMixBlack-Caps", Sans-serif;
+  font-size: 35.1px;
+  font-weight: 400;
+  -webkit-text-stroke-width: 2px;
+  stroke-width: 2px;
+  -webkit-text-stroke-color: #0078be;
+  stroke: #0078be;
+}
+.section:nth-child(4) h1 {
+  color: #21212100;
+  font-family: "TheMixBlack-Caps", Sans-serif;
+  font-size: 35.1px;
+  font-weight: 400;
+  -webkit-text-stroke-width: 2px;
+  stroke-width: 2px;
+  -webkit-text-stroke-color: #00802d;
+  stroke: #00802d;
+} */
+
 .sections .section h2 {
   font-size: 15px;
   text-align: center;
@@ -703,7 +753,7 @@ footer .columns .col h2 {
   color: var(--text-color);
 }
 footer .columns ul {
-  gap: 10px;
+  gap: 15px;
 }
 footer .columns ul li {
   margin-left: 20px;
@@ -914,7 +964,21 @@ footer .social i:hover {
   }
 
   /* footer  */
+  footer {
+    padding: 30px 3px;
+  }
+  footer .container {
+    width: 100%;
+  }
+  footer .columns {
+    width: 100%;
+    gap: 5px;
+  }
   footer .col {
+    width: 200px;
+  }
+  footer .col ul li {
+    font-size: 15px;
   }
 }
 
