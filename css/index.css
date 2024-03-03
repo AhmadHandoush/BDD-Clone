@@ -492,47 +492,6 @@ header .has-mega-2 .mega-2 {
   align-items: center;
 }
 
-/* .section:nth-child(2) .cl h1 {
-  color: #21212100;
-  font-family: "TheMixBlack-Caps", Sans-serif;
-  font-size: 35.1px;
-  font-weight: 400;
-  -webkit-text-stroke-width: 2px;
-  stroke-width: 2px;
-  -webkit-text-stroke-color: #e13870;
-  stroke: #e13870;
-}
-.section:nth-child(1) .cl h1 {
-  color: #21212100;
-  font-family: "TheMixBlack-Caps", Sans-serif;
-  font-size: 35.1px;
-  font-weight: 400;
-  -webkit-text-stroke-width: 2px;
-  stroke-width: 2px;
-  -webkit-text-stroke-color: #009a9e;
-  stroke: #009a9e;
-}
-.section:nth-child(3) h1 {
-  color: #21212100;
-  font-family: "TheMixBlack-Caps", Sans-serif;
-  font-size: 35.1px;
-  font-weight: 400;
-  -webkit-text-stroke-width: 2px;
-  stroke-width: 2px;
-  -webkit-text-stroke-color: #0078be;
-  stroke: #0078be;
-}
-.section:nth-child(4) h1 {
-  color: #21212100;
-  font-family: "TheMixBlack-Caps", Sans-serif;
-  font-size: 35.1px;
-  font-weight: 400;
-  -webkit-text-stroke-width: 2px;
-  stroke-width: 2px;
-  -webkit-text-stroke-color: #00802d;
-  stroke: #00802d;
-} */
-
 .sections .section h2 {
   font-size: 15px;
   text-align: center;
