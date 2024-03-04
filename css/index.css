@@ -281,7 +281,7 @@ header .has-mega-2 .mega-2 {
 
   width: 18%;
   min-width: 100px;
-  border-radius: 0.35rem;
+  border-radius: 6px;
 
   gap: 10px;
 }
@@ -380,7 +380,7 @@ header .has-mega-2 .mega-2 {
   position: relative;
   width: 230px;
   height: 550px;
-  border-radius: 0.3rem;
+  border-radius: 6px;
 
   transition: var(--main-transition);
 }
@@ -390,16 +390,13 @@ header .has-mega-2 .mega-2 {
 }
 .community .inner-box {
   flex-direction: column;
-  /* gap: 10px; */
+
   width: 100%;
   align-items: center;
   justify-content: space-between;
   height: 100%;
 }
-.community .top ul li svg {
-  font-size: 1em;
-  font-weight: bold;
-}
+
 .know {
   bottom: 0;
 }
@@ -613,12 +610,16 @@ header .has-mega-2 .mega-2 {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  gap: 0.2rem;
+  gap: 0.3rem;
+  justify-content: space-between;
 }
 
+.few-words .title {
+  width: 300px;
+}
 .few-words .title h2 {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 25px;
 }
 .few-words .word {
   gap: 10px;
@@ -686,7 +687,7 @@ header .has-mega-2 .mega-2 {
 /* footer  */
 
 footer .container {
-  width: 70%;
+  width: 80%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -694,9 +695,11 @@ footer {
   padding: 3rem;
   background-color: #212121;
   margin-top: 2rem;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
-
+footer .columns {
+  width: 100%;
+}
 footer .ok {
   margin-top: -10px;
   margin-bottom: 20px;
@@ -755,7 +758,7 @@ footer a:hover {
 }
 
 footer .reserve {
-  width: 70%;
+  width: 80%;
   margin-right: auto;
   margin-left: auto;
   margin-top: 2rem;
@@ -1291,5 +1294,12 @@ footer .social i:hover {
   }
   .final {
     gap: 10px;
+  }
+  footer .reserve {
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer .social {
+    padding-bottom: 10px;
   }
 }
